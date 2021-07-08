@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: #000000;
+  color: #fff;
+}
+
+.container {
+  width: 1152px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/****Navbar*****/
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100px;
+  margin-right: 10px;
+}
+
+.nav-wrapper ul.nav-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-wrapper ul.nav-list li {
+  margin-left: 30px;
+  padding: 20px 0;
+  position: relative;
+}
+
+.nav-wrapper ul.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-wrapper ul.nav-list li a:hover,
+.nav-wrapper ul.nav-list li.active a {
+  color: #933ded;
+}
+
+/****Button****/
+.btn {
+  background: #933ded;
+  color: #fff;
+  outline: none;
+  padding: 8px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border: 1px solid transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 160px;
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: 550;
+  margin-bottom: 20px;
+}
+
+.header h4 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.mobile .hamburger {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.mobile .hamburger span {
+  background: #fff;
+  width: 28px;
+  height: 2px;
+  margin-bottom: 8px;
+}
+
+.mobile ul.nav-list {
+  background: #000000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger {
+  z-index: 9999;
+}
+
+.mobile ul.nav-list.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile .hamburger span {
+  transform-origin: left;
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile ul.nav-list li a {
+  font-size: 20px;
+}
+
+.mobile ul.nav-list li {
+  text-align: center;
+  margin-top: 12px;
+  margin-left: -24px;
+}
+
+/******Footer******/
+.copyright .icons a:hover {
+  color: #933ded;
+  background: none;
+  text-decoration: none;
+}
+.copyright .icons a {
+  text-decoration: none;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width: 8px;
+  height: 8px;
+  font-size: 8px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  padding: 0.4%;
+  margin-right: 15px;
+  margin-bottom: 1px;
+}
+@media (max-width: 767px) {
+  .footer h2:first-child {
+    margin-top: 10%;
+  }
+  .footer .icons {
+    margin-bottom: 15%;
+  }
+  .footer h4,
+  .footer .mid-btm,
+  .footer .contact p {
+    text-align: left;
+  }
+  .footer .mid-btm {
+    margin-bottom: 10%;
+  }
+  .footer .contact {
+    padding-left: 0%;
+    margin-bottom: 5%;
+  }
+}
+.copyright {
+  background: rgba(255, 255, 255, 0);
+  padding: 10px 0;
+  text-align: center;
+  bottom: 0;
+}
+.copyright p {
+  font-size: 15px;
+  color: #fff;
+}
+
+/****Contact Form****/
+.form-control {
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.493);
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  background: none;
+}
+.form-group {
+  padding-right: 35px;
+}
+.form-control:active,
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: rgb(255, 255, 255);
+}
+.col-form-label {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+.form-control {
+  height: 45px;
+}
+.contact-wrap .col-form-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  display: inline-block;
+  padding: 0;
+}
+
+.contact-wrap .form,
+.contact-wrap .map {
+  padding-left: 20px;
+}
+
+.contact-wrap .form {
+  background: rgba(255, 255, 255, 0);
+}
+
+/******Cards*******/
+.row .card {
+  background-color: #00000000;
+  border-color: #fff;
+  padding: 8px 20px;
+  margin: 2%;
+  text-align: center;
+  min-height: 250px;
+  display: inline-block;
+}
+.row .card:hover {
+  transition: 1.5s;
+  background-color: #ffffff;
+  border-color: #fff;
+  color: #000000;
+}
+@media (max-width: 860px) {
+  .row .card {
+    z-index: -1;
+  }
+}
